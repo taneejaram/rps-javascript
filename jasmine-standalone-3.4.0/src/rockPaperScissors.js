@@ -18,8 +18,18 @@ Game.prototype.computerWeapon = function() {
   return this.computerChoice;
 };
 
+var rules = {'rock':'scissors',
+  'paper':'rock',
+  'scissors':'paper'};
+
 Game.prototype.winner = function() {
-  if (this.playerWeapon === 'scissors' && this.computerWeapon() === 'rock') {
+  if (rules[this.computerWeapon()] === this.playerWeapon) {
     return "Computer wins";
+  }
+  else if (rules[this.playerWeapon] === this.computerWeapon()) {
+    return "You win!";
+  }
+  else {
+    return "It's a draw!"
   }
 };
