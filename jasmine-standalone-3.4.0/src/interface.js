@@ -12,7 +12,7 @@ $( document ).ready(function() {
     event.preventDefault();
     let inputName = $('#name').val();
     game.setPlayerName(inputName);
-    $('#playername').text("Welcome " + game.playerName + ", choose your weapon...");
+    $('#playername').text("Welcome " + game.playerName + ", choose your weapon..");
   });
 
 });
