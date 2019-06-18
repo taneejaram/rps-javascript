@@ -23,10 +23,10 @@ var rules = {'rock':'scissors',
   'scissors':'paper'};
 
 Game.prototype.winner = function() {
-  if (rules[this.computerWeapon()] === this.playerWeapon) {
+  if (rules[this.computerWeapon()] === this.playerWeapon.toLowerCase()) {
     return "Computer wins";
   }
-  else if (rules[this.playerWeapon] === this.computerWeapon()) {
+  else if (rules[this.playerWeapon.toLowerCase()] === this.computerWeapon()) {
     return "You win!";
   }
   else {
